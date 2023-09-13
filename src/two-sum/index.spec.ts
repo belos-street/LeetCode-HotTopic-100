@@ -1,5 +1,3 @@
-//link: https://leetcode.cn/problems/two-sum/
-
 import { describe, expect, it } from 'vitest'
 import { twoSum } from '.'
 
