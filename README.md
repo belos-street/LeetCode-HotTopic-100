@@ -3,7 +3,7 @@ TypeScript 实现力扣热题100合集
 
 ### Topic
 
-1. [两数之和 two-sum](https://github.com/belos-street/LeetCode-HotTopic-100/tree/main/src/two-sum​)
+1. [两数之和 two-sum](https://github.com/belos-street/LeetCode-HotTopic-100/tree/main/src/two-sum)
 2. [字母异位词分组 group-anagrams](https://github.com/belos-street/LeetCode-HotTopic-100/tree/main/src/group-anagrams)
 
 
