@@ -1,5 +1,5 @@
 export function groupAnagrams2(strs: string[]): string[][] {
-  const letterMap = {
+  const letterMap: { [key in string]: number } = {
     a: 2,
     b: 3,
     c: 5,
@@ -30,7 +30,7 @@ export function groupAnagrams2(strs: string[]): string[][] {
 
   const map: { [key in number]: string[] } = {}
   for (let i = 0; i < strs.length; i++) {
-    const countKey = strs[i].split('').reduce((pre, item) => (letterMap as any)[item] + pre, 0)
+    const countKey = strs[i].split('').reduce((pre, item) => letterMap[item] * pre, 1)
     !(countKey in map) && (map[countKey] = [])
     map[countKey].push(strs[i])
   }

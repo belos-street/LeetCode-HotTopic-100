@@ -24,8 +24,6 @@ describe('字母异位词分组', () => {
 
   it('example3', () => {
     expect(groupAnagrams(['a'])).toMatchObject([['a']])
-
-    console.log(groupAnagrams2(['ac', 'd', 'ca']))
     expect(groupAnagrams2(['a'])).toMatchObject([['a']])
   })
 })
