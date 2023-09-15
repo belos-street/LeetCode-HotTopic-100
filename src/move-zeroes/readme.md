@@ -12,4 +12,5 @@ Topic Link :  [https://leetcode.cn/problems/move-zeroes/](https://leetcode.cn/pr
 ### moveZeroes2
 
 1. 双指针，前指针指数组第0位，后指针指数组最后位
-2. 开始循环，当前指针大于等于后指针，循环结束
+2. 开始循环，如果循环到0则删除并在数组末尾添加0
+3. 当前指针大于等于后指针，循环结束

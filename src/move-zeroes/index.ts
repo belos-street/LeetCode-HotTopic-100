@@ -32,9 +32,8 @@ export function moveZeroes2(nums: number[]): number[] {
     if (nums[frontPoint] === 0) {
       nums.splice(frontPoint, 1) //循环到0则把0删除
       nums.push(0) //后面加个0
-      backPoint-- //后指针--
     } else {
-      frontPoint++ //不是0不做操作前指针++
+      frontPoint++
     }
   }
 
