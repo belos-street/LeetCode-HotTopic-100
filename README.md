@@ -12,3 +12,4 @@ https://leetcode.cn/studyplan/top-100-liked/
 3. [最长连续序列 longest-consecutive-sequence](https://github.com/belos-street/LeetCode-HotTopic-100/tree/main/src/longest-consecutive-sequence)
 4. [移动零 move-zeroes](https://github.com/belos-street/LeetCode-HotTopic-100/tree/main/src/move-zeroes)
 5. [盛最多水的容器 container-with-most-water](https://github.com/belos-street/LeetCode-HotTopic-100/tree/main/src/container-with-most-water)
+6. [三数之和 3sum](https://github.com/belos-street/LeetCode-HotTopic-100/tree/main/src/3sum)
