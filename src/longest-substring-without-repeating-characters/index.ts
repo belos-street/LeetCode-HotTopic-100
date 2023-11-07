@@ -8,7 +8,7 @@ export function longestSubstringWithoutRepeatingCharacters(s: string): number {
   for (rightPoint; rightPoint < s.length; rightPoint++) {
     const char = s[rightPoint]
 
-    //判断窗口中是否有重复元素
+    //判断窗口中是否有重复元素，一直到没有重复字符
     while (windowSet.has(char)) {
       windowSet.delete(s[leftPoint]) //删除窗口最左边字符
       leftPoint++ //左指针右移
