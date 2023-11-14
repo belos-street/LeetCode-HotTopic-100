@@ -75,9 +75,9 @@ export function findAllAnagramsInAString(s: string, p: string): number[] {
   }
 
   let windowStart = 0, // 滑动窗口的起始位置
-    windowEnd = 0, // 滑动窗口的结束位置
-    pLength = p.length // 字符串 p 的长度
+    windowEnd = 0 // 滑动窗口的结束位置
 
+  let pLength = p.length
   // 使用滑动窗口遍历字符串 s
   while (windowEnd < s.length) {
     const charEnd = s.charCodeAt(windowEnd) - 97 // 当前窗口结束位置的字符转换为索引
