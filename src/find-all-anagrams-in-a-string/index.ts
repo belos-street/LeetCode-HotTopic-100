@@ -65,35 +65,36 @@ export function findAllAnagramsInAString_bad2(s: string, p: string): number[] {
  * 提前结束遍历：当确定某个子串不是异位串时，可以提前结束当前子串的遍历，从而节省时间
  */
 export function findAllAnagramsInAString(s: string, p: string): number[] {
-  const result: number[] = []
-  const count: number[] = new Array(26).fill(0)
+  const result: number[] = [] // 存放结果的数组
+  const count: number[] = new Array(26).fill(0) // 用于统计字符出现次数的数组
 
+  // 统计字符串 p 中各个字符的出现次数
   for (let i = 0; i < p.length; i++) {
-    const index = p.charCodeAt(i) - 97
-    count[index]++
+    const index = p.charCodeAt(i) - 97 // 将字符转换为在 count 数组中的索引（a 对应 0，b 对应 1，依此类推）
+    count[index]++ // 统计出现次数
   }
 
-  let windowStart = 0,
-    windowEnd = 0,
-    pLength = p.length
+  let windowStart = 0, // 滑动窗口的起始位置
+    windowEnd = 0, // 滑动窗口的结束位置
+    pLength = p.length // 字符串 p 的长度
 
+  // 使用滑动窗口遍历字符串 s
   while (windowEnd < s.length) {
-    const charEnd = s.charCodeAt(windowEnd) - 97
-    if (count[charEnd] > 0) {
-      pLength--
-    }
-    count[charEnd]--
-    windowEnd++
+    const charEnd = s.charCodeAt(windowEnd) - 97 // 当前窗口结束位置的字符转换为索引
+    count[charEnd] > 0 && pLength--
+    count[charEnd]-- // 将当前字符从统计数组中减一
+    windowEnd++ // 结束位置右移一位
 
-    pLength === 0 && result.push(windowStart)
+    pLength === 0 && result.push(windowStart) // 如果 pLength 等于 0，表示找到了一个字母异位词，将起始位置加入结果数组
 
+    // 如果窗口大小等于 p 的长度，需要移动窗口的起始位置
     if (windowEnd - windowStart === p.length) {
-      const charStart = s.charCodeAt(windowStart) - 97
-      count[charStart] >= 0 && pLength++
-      count[charStart]++
-      windowStart++
+      const charStart = s.charCodeAt(windowStart) - 97 // 当前窗口起始位置的字符转换为索引
+      count[charStart] >= 0 && pLength++ // 如果起始位置字符在 p 中，则 pLength 加一
+      count[charStart]++ // 将起始位置字符的统计加一
+      windowStart++ // 起始位置右移一位
     }
   }
 
-  return result
+  return result // 返回结果数组
 }
