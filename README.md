@@ -1,5 +1,5 @@
 # LeetCode-HotTopic-100
-TypeScript 手撕力扣热题100合集
+TypeScript 手撕力扣热题100合集 -
 
 ### Link
 https://leetcode.cn/studyplan/top-100-liked/
